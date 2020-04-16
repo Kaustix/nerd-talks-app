@@ -1,18 +1,15 @@
-import {
-  ActionReducer,
-  ActionReducerMap,
-  createFeatureSelector,
-  createSelector,
-  MetaReducer,
-} from '@ngrx/store';
+import { ActionReducer, ActionReducerMap, MetaReducer } from '@ngrx/store';
+import { RouterReducerState, routerReducer} from '@ngrx/router-store';
 import { environment } from '../../../environments/environment';
-import { INerdEventState, nerdEventsReducer } from './nerd-event.reducer';
+import { NerdEventState, nerdEventsReducer } from './nerd-event.reducer';
 
 export interface State {
-  nerdEvents: INerdEventState;
+  router: RouterReducerState;
+  nerdEvents: NerdEventState;
 }
 
 export const reducers: ActionReducerMap<State> = {
+  router: routerReducer,
   nerdEvents: nerdEventsReducer
 };
 

@@ -1,13 +1,13 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { INerdEvent } from '../../models/nerd-event.interface';
+import { NerdEvent } from '../../models/nerd-event.interface';
 import { Actions } from '../actions/nerd-event.actions';
 
-export interface INerdEventState {
-  events: INerdEvent[];
-  selectedEvent: INerdEvent;
+export interface NerdEventState {
+  events: NerdEvent[];
+  selectedEvent: NerdEvent;
 }
 
-export const initialState: INerdEventState = {
+export const initialState: NerdEventState = {
   events: [],
   selectedEvent: null
 };
@@ -17,6 +17,6 @@ const reducer = createReducer(
   on(Actions.GetEventsSucceeded, (state, { payload }) => ({ ...state, events: payload })),
 );
 
-export function nerdEventsReducer(state: INerdEventState | undefined, action: Action) {
+export function nerdEventsReducer(state: NerdEventState | undefined, action: Action) {
   return reducer(state, action);
 }

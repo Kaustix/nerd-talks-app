@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Store, select } from '@ngrx/store';
+import { NerdEventActions } from '../store/actions/nerd-event.actions';
+import { selectEvents } from '../store/selectors/nerd-event.selectors';
+
 
 @Component({
   selector: 'app-nerd-events',
@@ -6,10 +10,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nerd-events.component.scss']
 })
 export class NerdEventsComponent implements OnInit {
+  events = this.store.pipe(select(selectEvents));
 
-  constructor() { }
+  constructor(private store: Store) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.store.dispatch(NerdEventActions.getEvents());
   }
-
 }
