@@ -1,6 +1,11 @@
 <div>
   <h2>Nerd Events</h2>
-  <div *ngFor="let event in events">
-
+  <div class="card" *ngFor="let event of events | async">
+    <div class="card-header">
+      <h4>{{ event.presenter }}</h4>
+    </div>
+    <div class="card-content">
+      <p>{{event.description}}</p>
+    </div>
   </div>
 </div>

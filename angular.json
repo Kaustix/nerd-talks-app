@@ -129,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "nerd-talks-app"
+    }
+  },
+  "defaultProject": "nerd-talks-app",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }

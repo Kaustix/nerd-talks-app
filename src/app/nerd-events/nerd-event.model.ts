@@ -1,5 +1,7 @@
+import { ID } from '@datorama/akita';
+
 export interface NerdEvent {
-  id: number;
+  id: ID;
   presenter: string;
   description: string;
 }
