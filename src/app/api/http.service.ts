@@ -22,9 +22,8 @@ export class HttpService {
   }
 
   get<T>(path: string, params: HttpParams = new HttpParams()): Observable<any> {
-    const value = this.http.get<T>(`${environment.apiUrl}${path}`, {params});
-    console.log(value.subscribe(val => console.log(JSON.stringify(val))));
-    return value
+    return this.http
+      .get<T>(`${environment.apiUrl}${path}`, {params})
       .pipe(catchError(this.formatErrors));
   }
 
