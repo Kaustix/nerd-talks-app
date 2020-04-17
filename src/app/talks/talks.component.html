@@ -1,15 +1,19 @@
 <div>
   <h1>Talks</h1>
-  <div class="vertical-tabs">
-    <app-tab (selected)="filterUpcoming()" [isActive]="true">Upcoming</app-tab>
-    <app-tab (selected)="filterPast()" [isActive]="true">Past</app-tab>
-  </div>
-  <div class="card" *ngFor="let talk of talks | async">
-    <div class="card-header">
-      <h4>{{ talk.presenter }}</h4>
+  <div class="container">
+    <div class="vertical-tabs">
+      <app-tab (selected)="filterUpcoming()" [isActive]="true">Upcoming</app-tab>
+      <app-tab (selected)="filterPast()" [isActive]="true">Past</app-tab>
     </div>
-    <div class="card-content">
-      <p>{{talk.description}}</p>
+    <div class="list">
+      <div class="card" *ngFor="let talk of talks | async">
+        <div class="card-header">
+          <h4>{{ talk.presenter }}</h4>
+        </div>
+        <div class="card-content">
+          <p>{{talk.description}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

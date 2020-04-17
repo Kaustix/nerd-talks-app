@@ -1,3 +1,13 @@
 .card {
   margin: 16px;
 }
+
+.vertical-tabs {
+  min-width: 250px;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
