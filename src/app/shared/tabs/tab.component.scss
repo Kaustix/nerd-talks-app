@@ -1,9 +1,13 @@
 @import "variables";
 
 .tab {
-  padding: 16px;
+  padding: 12px;
   cursor: pointer;
-  color: $gray-800;
+  color: $gray-600;
+}
+
+.title {
+  width: 100%;
 
   &.active {
     border-right: 4px solid $primary;

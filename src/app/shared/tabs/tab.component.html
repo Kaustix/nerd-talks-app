@@ -1,3 +1,9 @@
-<div [ngClass]="{ 'tab': true, 'active': isActive}" (click)="selected.emit()">
-  <span class="header-6"><ng-content></ng-content></span>
+<div class="tab" (click)="clickEvent.emit()">
+  <div [ngClass]="{
+  'header-6': true,
+  'title': true,
+  'active': active
+  }">
+    <ng-content></ng-content>
+  </div>
 </div>

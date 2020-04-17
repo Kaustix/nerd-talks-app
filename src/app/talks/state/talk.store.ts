@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
 import { EntityState, EntityStore, StoreConfig } from '@datorama/akita';
+import { produce } from 'immer';
 import { Talk } from './talk.model';
+import { VISIBILITY_FILTER } from '../talk-filter/filter.model';
 
 export interface TalkState extends EntityState<Talk>{
-  filter: string;
+  filter: VISIBILITY_FILTER;
 }
 
-export function createInitialState(): TalkState {
-  return {
-    filter: 'ALL'
-  };
-}
+const initialState: TalkState = {
+  filter: VISIBILITY_FILTER.SHOW_UPCOMING
+};
 
 @Injectable({ providedIn: 'root' })
-@StoreConfig({ name: 'talks' })
+@StoreConfig({ name: 'talks', producerFn: produce })
 export class TalkStore extends EntityStore<TalkState, Talk> {
   constructor() {
-    super(createInitialState());
+    super(initialState);
   }
 }
 

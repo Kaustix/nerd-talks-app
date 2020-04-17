@@ -7,6 +7,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class TabComponent {
   @Input() public title: string;
-  @Input() public isActive: boolean;
-  @Output() public selected: EventEmitter<any> = new EventEmitter();
+  @Input() public active: boolean;
+  @Output() public clickEvent: EventEmitter<any> = new EventEmitter();
 }

@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { ApiModule } from '../api/api.module';
 import { TalksComponent } from './talks.component';
+import { TalkComponent } from './talk/talk.component';
+import { TalkFilterComponent } from './talk-filter/talk-filter.component';
 
 const routes: Routes = [
   { path: '', component: TalksComponent }
@@ -11,7 +13,9 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    TalksComponent
+    TalksComponent,
+    TalkComponent,
+    TalkFilterComponent
   ],
   imports: [
     CommonModule,
