@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { ApiModule } from '../api/api.module';
-import { NerdEventsComponent } from './nerd-events.component';
+import { TalksComponent } from './talks.component';
 
 const routes: Routes = [
-  { path: '', component: NerdEventsComponent }
+  { path: '', component: TalksComponent }
 ];
 
 @NgModule({
   declarations: [
-    NerdEventsComponent
+    TalksComponent
   ],
   imports: [
     CommonModule,
@@ -21,4 +21,4 @@ const routes: Routes = [
   ],
   providers: []
 })
-export class NerdEventsModule {}
+export class TalksModule {}

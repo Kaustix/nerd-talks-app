@@ -29,7 +29,8 @@
             ],
             "styles": [
               "./node_modules/normalize.css/normalize.css",
-              "./src/assets/styles/_styles.scss"
+              "./src/assets/styles/_styles.scss",
+              "./src/assets/styles/_typography.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [

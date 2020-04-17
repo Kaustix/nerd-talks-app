@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from './http.service';
 import { Observable } from 'rxjs';
-import { NerdEvent } from '../nerd-events/nerd-event.model';
+import { Talk } from '../talks/talk.model';
 
 @Injectable({providedIn: 'root'})
 export class NerdTalksApi {
   constructor(private http: HttpService) {
   }
 
-  getAllEvents(): Observable<NerdEvent[]> {
-    return this.http.get<NerdEvent[]>('/events');
+  getAllTalks(): Observable<Talk[]> {
+    return this.http.get<Talk[]>('/talks');
   }
 }

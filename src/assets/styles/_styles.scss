@@ -3,7 +3,7 @@
 @import "variables";
 
 html {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-family: $font-family;
   font-size: 14px;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -13,12 +13,26 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: $white-100;
+  color: $text;
+}
+
+%card {
+  padding: 16px;
+  border-radius: 8px;
+  background: $white;
+}
+
+.card-raised {
+  @extend %card;
+  border: $border;
+  box-shadow: $shadow;
 }
 
 .card {
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,.125);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  background: $white;
+  @extend %card;
+}
+
+.vertical-tabs {
+  @extend %card;
 }
