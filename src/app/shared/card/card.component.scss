@@ -1,13 +1,16 @@
 @import "variables";
+@import "partials";
+@import "typography";
 
 .card {
-  padding: 16px;
-  margin: 16px 8px;
-  border-radius: 8px;
-  background: $white;
+  @extend %card;
 
   &:hover {
     box-shadow: $shadow;
     cursor: pointer;
+  }
+
+  .header {
+    font-weight: bold
   }
 }

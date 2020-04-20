@@ -1,19 +1,17 @@
-<div>
-  <div class="article-header">
-    <div class="typography-h3">Talks</div>
-  </div>
-  <div class="container">
+<div class="container">
+  <div class="typography-h3 gutter-bottom">Talks</div>
+  <div class="content">
     <app-talk-filter
       [active]="activeFilter$ | async"
       [filters]="filters"
       (update)="changeFilter($event)">
     </app-talk-filter>
-    <div class="list">
+    <div>
       <app-card [header]="talk.title" *ngFor="let talk of talks$ | async">
         <div>
           <p class="text-secondary">
             <i class="fas fa-calendar-alt icon"></i>
-            {{talk.date}}
+            {{talk.date | date:"EEE MMM d, y, h:mm a" }}
           </p>
           <p class="text-secondary">
             <i class="fas fa-user icon"></i>

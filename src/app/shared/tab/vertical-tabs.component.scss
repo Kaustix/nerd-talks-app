@@ -1,9 +1,9 @@
-@import "variables";
+@import "partials";
 
 .vertical-tabs {
-  padding: 16px;
-  margin: 8px;
-  border-radius: 8px;
-  background: $white;
+  @extend %card;
+
+  margin-left: 0;
+  padding-left: 0;
   min-width: 250px;
 }
