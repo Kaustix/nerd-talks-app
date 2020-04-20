@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { TabComponent } from './tabs/tab.component';
+import { TabComponent } from './tab/tab.component';
+import { VerticalTabsComponent } from './tab/vertical-tabs.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   imports: [
@@ -9,10 +11,14 @@ import { TabComponent } from './tabs/tab.component';
     RouterModule
   ],
   declarations: [
-    TabComponent
+    TabComponent,
+    VerticalTabsComponent,
+    CardComponent
   ],
   exports: [
-    TabComponent
+    TabComponent,
+    VerticalTabsComponent,
+    CardComponent
   ],
   providers: []
 })

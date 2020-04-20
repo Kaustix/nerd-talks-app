@@ -3,11 +3,12 @@
 .tab {
   padding: 12px;
   cursor: pointer;
-  color: $gray-600;
 }
 
 .title {
   width: 100%;
+  font-weight: bold;
+  color: $gray-600;
 
   &.active {
     border-right: 4px solid $primary;

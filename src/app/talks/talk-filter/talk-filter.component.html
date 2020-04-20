@@ -1,5 +1,5 @@
-<div class="vertical-tabs">
+<app-vertical-tab>
   <app-tab *ngFor="let filter of filters" [active]="active === filter.value" (clickEvent)="update.emit(filter.value)">
     {{ filter.label }}
   </app-tab>
-</div>
+</app-vertical-tab>

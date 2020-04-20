@@ -1,0 +1,13 @@
+@import "variables";
+
+.card {
+  padding: 16px;
+  margin: 16px 8px;
+  border-radius: 8px;
+  background: $white;
+
+  &:hover {
+    box-shadow: $shadow;
+    cursor: pointer;
+  }
+}

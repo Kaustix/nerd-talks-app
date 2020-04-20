@@ -1,6 +1,6 @@
 <div>
   <div class="article-header">
-    <h1>Talks</h1>
+    <div class="typography-h3">Talks</div>
   </div>
   <div class="container">
     <app-talk-filter
@@ -9,17 +9,21 @@
       (update)="changeFilter($event)">
     </app-talk-filter>
     <div class="list">
-      <div class="card" *ngFor="let talk of talks$ | async">
-        <h2>{{ talk.title }}</h2>
-        <div class="card-content">
-          <p>{{talk.date}}</p>
-          <div>
-            <i class="fas fa-user"></i>
+      <app-card [header]="talk.title" *ngFor="let talk of talks$ | async">
+        <div>
+          <p class="text-secondary">
+            <i class="fas fa-calendar-alt icon"></i>
+            {{talk.date}}
+          </p>
+          <p class="text-secondary">
+            <i class="fas fa-user icon"></i>
             {{talk.presenter}}
-          </div>
-          <p>{{talk.description}}</p>
+          </p>
+          <p class="typography-body">
+            {{talk.description}}
+          </p>
         </div>
-      </div>
+      </app-card>
     </div>
   </div>
 </div>
