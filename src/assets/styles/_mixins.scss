@@ -1,5 +1,29 @@
 @import "variables";
 
+@mixin sm {
+  @media (min-width: #{$screen-sm}) {
+    @content
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-md}) {
+    @content
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg}) {
+    @content
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-xl}) {
+    @content
+  }
+}
+
 @mixin card {
   padding: 16px;
   margin: 8px 0;

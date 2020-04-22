@@ -24,10 +24,11 @@ body {
 }
 
 .container-fluid {
-  max-width: 1034px;
+  max-width: 1024px;
   display: flex;
   align-items: flex-start;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 .gutter-bottom {

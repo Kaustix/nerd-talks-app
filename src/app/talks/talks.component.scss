@@ -1,5 +1,7 @@
+@import "mixins";
+
 .container {
-  padding: 16px 0;
+  padding-top: 16px;
 }
 
 .header {
@@ -11,5 +13,9 @@
 
 .content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  @include md {
+    flex-direction: row;
+  }
 }
