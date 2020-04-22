@@ -1,0 +1,37 @@
+@import "mixins";
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.button {
+  @include button-reset;
+
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 0;
+  border: solid 1px transparent;
+  border-radius: 0;
+  padding: 0.765em 1.25em;
+  color: $white;
+  background-color: $primary;
+  text-transform: uppercase;
+
+  &:active, &:hover {
+    background-color: darken($primary, 10%);
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+}

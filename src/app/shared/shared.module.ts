@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { TabComponent } from './tab/tab.component';
 import { VerticalTabsComponent } from './tab/vertical-tabs.component';
 import { CardComponent } from './card/card.component';
+import { ButtonComponent} from './button/button.component';
 
 @NgModule({
   imports: [
@@ -13,12 +14,14 @@ import { CardComponent } from './card/card.component';
   declarations: [
     TabComponent,
     VerticalTabsComponent,
-    CardComponent
+    CardComponent,
+    ButtonComponent
   ],
   exports: [
     TabComponent,
     VerticalTabsComponent,
-    CardComponent
+    CardComponent,
+    ButtonComponent
   ],
   providers: []
 })

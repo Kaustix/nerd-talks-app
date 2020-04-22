@@ -1,0 +1,15 @@
+<app-card [header]="talk.title">
+  <div>
+    <p class="text-secondary">
+      <i class="fas fa-calendar-alt icon"></i>
+      {{talk.date | date:"EEE MMM d, y, h:mm a" }}
+    </p>
+    <p class="text-secondary">
+      <i class="fas fa-user icon"></i>
+      {{talk.presenter}}
+    </p>
+    <p class="typography-body">
+      {{talk.description}}
+    </p>
+  </div>
+</app-card>

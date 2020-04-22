@@ -1,5 +1,8 @@
 <div class="container">
-  <div class="typography-h3 gutter-bottom">Talks</div>
+  <div class="header">
+    <div class="typography-h3 gutter-bottom">Talks</div>
+<!--    <app-button icon="+">Create Talk</app-button>-->
+  </div>
   <div class="content">
     <app-talk-filter
       [active]="activeFilter$ | async"
@@ -7,21 +10,7 @@
       (update)="changeFilter($event)">
     </app-talk-filter>
     <div>
-      <app-card [header]="talk.title" *ngFor="let talk of talks$ | async">
-        <div>
-          <p class="text-secondary">
-            <i class="fas fa-calendar-alt icon"></i>
-            {{talk.date | date:"EEE MMM d, y, h:mm a" }}
-          </p>
-          <p class="text-secondary">
-            <i class="fas fa-user icon"></i>
-            {{talk.presenter}}
-          </p>
-          <p class="typography-body">
-            {{talk.description}}
-          </p>
-        </div>
-      </app-card>
+      <app-talk-card *ngFor="let talk of talks$ | async" [talk]="talk"></app-talk-card>
     </div>
   </div>
 </div>
