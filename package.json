@@ -5,12 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "prestart:prod": "ng build --prod",
+    "build:prod": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build --prod",
     "start:prod": "node server.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "npm run prestart:prod"
+    "heroku-postbuild": "npm run build:prod"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +31,7 @@
     "angular-in-memory-web-api": "^0.10.0",
     "date-fns": "^2.12.0",
     "express": "^4.17.1",
+    "faker": "^4.1.0",
     "immer": "^6.0.3",
     "normalize.css": "^8.0.1",
     "rxjs": "^6.5.5",
@@ -45,7 +46,6 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
-    "faker": "^4.1.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.4.1",
@@ -57,8 +57,5 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
-  },
-  "engines" : {
-    "node" : ">=12.16.2"
   }
 }
