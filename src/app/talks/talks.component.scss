@@ -1,21 +1,29 @@
 @import "mixins";
 
+:host {
+  width: 100%;
+}
+
 .container {
   padding-top: 16px;
 }
 
-.header {
+.page-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.content {
+.page-content {
   display: flex;
   flex-direction: column;
 
   @include md {
     flex-direction: row;
   }
+}
+
+.talk-list {
+  width: 100%;
 }

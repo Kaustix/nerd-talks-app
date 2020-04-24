@@ -1,15 +1,15 @@
 <div class="container">
-  <div class="header">
+  <div class="page-header">
     <div class="typography-h3 gutter-bottom">Talks</div>
 <!--    <app-button icon="+">Create Talk</app-button>-->
   </div>
-  <div class="content">
+  <div class="page-content">
     <app-talk-filter
       [active]="activeFilter$ | async"
       [filters]="filters"
       (update)="changeFilter($event)">
     </app-talk-filter>
-    <div>
+    <div class="talk-list">
       <app-talk-card *ngFor="let talk of talks$ | async" [talk]="talk"></app-talk-card>
     </div>
   </div>
