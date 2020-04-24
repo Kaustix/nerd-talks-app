@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: process.env.API_URL
+  apiUrl: 'https://nerd-talks-api.herokuapp.com/'
 };
