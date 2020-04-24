@@ -8,9 +8,9 @@ import { environment } from '../../environments/environment';
 @NgModule({
   imports: [
     HttpClientModule,
-    // environment.production ? [] : HttpClientInMemoryWebApiModule.forRoot(FakeNerdTalksApi, {
-    //   apiBase: ''
-    // })
+    environment.production ? [] : HttpClientInMemoryWebApiModule.forRoot(FakeNerdTalksApi, {
+      apiBase: ''
+    })
   ],
   providers: [
     NerdTalksApi
